@@ -16,7 +16,10 @@ class PostController extends Controller
     }
 
     public function show(Post $post){
-        return view('posts.show', compact('post'));
+        $post->body = nl2br($post->body);
+
+        $posts = Post::where('category_id', $post->category_id)->latest()->limit(6)->get();
+        return view('posts.show', compact('post', 'posts'));
     }
 
     public function create(){
@@ -96,5 +99,14 @@ class PostController extends Controller
         
         session()->flash('success', 'The post was destroyed');
         return redirect('posts');   
+    }
+
+    public function search()
+    {   
+        $query = request('query');
+
+        $posts = Post::where('title', 'like', "%$query%")->latest()->paginate(10);
+        // return $posts;
+        return view('posts.index', compact('posts'));
     }
 }
