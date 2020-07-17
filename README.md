@@ -3,7 +3,7 @@
 Repository ini adalah portfolio saya untuk pengembangan web menggunakan :
 
 - [Laravel](https://laravel.com) untuk backend framework.
-- [Bootstrap](https://bootstrap.com) untuk frontend framwork.
+- [Bootstrap](https://bootstrap.com) untuk frontend framework.
 - My SQL untuk DBMS (Database Management System).
 
 ## Fitur
