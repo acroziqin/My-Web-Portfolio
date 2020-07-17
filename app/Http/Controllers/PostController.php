@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\{Category, Post, Tag};
 use App\Http\Requests\PostRequest;
+use App\Http\Resources\PostResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -108,5 +109,10 @@ class PostController extends Controller
         $posts = Post::where('title', 'like', "%$query%")->latest()->paginate(10);
         // return $posts;
         return view('posts.index', compact('posts'));
+    }
+
+    public function apiIndex(){
+        $post = Post::paginate(6);
+        return PostResource::collection($post);
     }
 }
