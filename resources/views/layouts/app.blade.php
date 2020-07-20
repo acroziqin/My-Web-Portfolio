@@ -20,13 +20,22 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <main id="app">
         @include('layouts.navigation')
         @include('alert')
 
-        <main class="py-4">
+        <div class="py-4">
+            <router-view></router-view>
             @yield('content')
-        </main>
-    </div>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $(".teks").hide();
+            });
+        });
+    </script>
 </body>
 </html>

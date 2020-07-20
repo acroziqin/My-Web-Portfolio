@@ -3,6 +3,7 @@
       <a class="navbar-brand" href="{{ url('/') }}">
           {{ config('app.name', 'Laravel') }}
       </a>
+      {{-- <home/> --}}
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
           <span class="navbar-toggler-icon"></span>
       </button>
@@ -11,7 +12,7 @@
           <!-- Left Side Of Navbar -->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a href="{{ route('posts.index') }}" class="nav-link">Posts</a>
+                <navigation/>
             </li>
           </ul>
           <form action="{{ route('posts.search') }}" class="form-inline my-2 my-lg-0">
@@ -38,7 +39,8 @@
                       </a>
 
                       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="{{ route('logout') }}"
+                            <a href="{{ route('posts.create') }}" class="dropdown-item">New Post</a>
+                            <a class="dropdown-item" href="{{ route('logout') }}"
                              onclick="event.preventDefault();
                                            document.getElementById('logout-form').submit();">
                               {{ __('Logout') }}

@@ -112,7 +112,7 @@ class PostController extends Controller
     }
 
     public function apiIndex(){
-        $post = Post::paginate(6);
+        $post = Post::latest()->paginate(6);
         return PostResource::collection($post);
     }
 }

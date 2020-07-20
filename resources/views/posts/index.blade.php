@@ -3,25 +3,16 @@
 @section('content')
     <div class="container">
         <div class="d-flex justify-content-between">
-            <div>
-                @isset($category)
-                    <h4>Category: {{ $category->name }}</h4>
-                @endisset
-                @isset($tag)
-                    <h4>Tag: {{ $tag->name }}</h4>
-                @endisset
-                @if (!isset($tag) && !isset($category))
-                    <h4>All Posts</h4>
-                @endif
-                <hr>
-            </div>
-            <div>
-                @if (Auth::check())
-                    <a href="{{ route('posts.create') }}" class="btn btn-primary">New Post</a>
-                @else
-                    <a href="{{ route('login') }}" class="btn btn-primary">Login to create new post</a>
-                @endif
-            </div>
+            @isset($category)
+                <h4>Category: {{ $category->name }}</h4>
+            @endisset
+            @isset($tag)
+                <h4>Tag: {{ $tag->name }}</h4>
+            @endisset
+            @if (!isset($tag) && !isset($category))
+                <h4>All Posts</h4>
+            @endif
+            <hr>
         </div>
         <div class="row">
             @forelse ($posts as $post)
