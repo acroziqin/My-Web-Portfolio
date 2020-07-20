@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -8,9 +9,11 @@ use Illuminate\Support\Facades\Route;
 // });
 // Route::get('/', 'HomeController');
 
+
+Route::view('posts', 'layouts.app');
 // Posts
 Route::prefix('posts')->middleware('auth')->group(function () {
-    Route::get('', 'PostController@index')->name('posts.index')->withoutMiddleware('auth');
+    // Route::get('', 'PostController@index')->name('posts.index')->withoutMiddleware('auth');
     Route::get('create', 'PostController@create')->name('posts.create');
     Route::post('store', 'PostController@store');
     Route::get('search', 'PostController@search')->name('posts.search');
