@@ -3,7 +3,7 @@
 Repository ini adalah portfolio saya untuk pengembangan web menggunakan :
 
 - [Laravel](https://laravel.com) untuk backend framework.
-- [Bootstrap](https://bootstrap.com) untuk frontend framework.
+- [Bootstrap](https://bootstrap.com) dan [Vue](vuejs.org) untuk frontend framework.
 - My SQL untuk DBMS (Database Management System).
 
 ## Fitur
@@ -12,3 +12,4 @@ Repository ini adalah portfolio saya untuk pengembangan web menggunakan :
 - Authentication untuk login
 - Search post
 - Basic API untuk data post
+- Chat App
