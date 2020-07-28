@@ -9,9 +9,15 @@
 
                     <div class="card-body">
                         <!-- @if (session('status')) -->
+<<<<<<< HEAD
                         <!-- <div class="alert alert-success" role="alert"> -->
                         <!-- {{ session('status') }} -->
                         <!-- </div> -->
+=======
+                            <!-- <div class="alert alert-success" role="alert"> -->
+                                <!-- {{ session('status') }} -->
+                            <!-- </div> -->
+>>>>>>> bae16c513ef1fde7de88e170cf14535fc47cf673
                         <!-- @endif -->
 
                         You are logged in!
@@ -24,6 +30,7 @@
 
 <script>
 export default {
+<<<<<<< HEAD
     // methods: {
     //     logout() {
     //         this.$store.dispatch("logout");
@@ -38,3 +45,14 @@ export default {
 </script>
 
 <style></style>
+=======
+    // props:{
+    //     seen: true
+    // }
+}
+</script>
+
+<style>
+
+</style>
+>>>>>>> bae16c513ef1fde7de88e170cf14535fc47cf673
