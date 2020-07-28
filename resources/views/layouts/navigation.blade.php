@@ -14,6 +14,9 @@
             <li class="nav-item">
                 <navigation/>
             </li>
+            <li class="nav-item">
+              <a href="{{ route('chat') }}" class="nav-link">Chat</a>
+            </li>
           </ul>
           <form action="{{ route('posts.search') }}" class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query">
